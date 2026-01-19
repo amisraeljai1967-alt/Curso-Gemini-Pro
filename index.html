@@ -189,39 +189,56 @@
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Más de 60 prompts especializados listos para usar.</span>
+                            <span class="text-gray-300"><strong>4 Archivos Técnicos (PDF/Gamma):</strong> Un documento de estudio detallado por cada módulo (explicación + prompts).</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Metodología teórico-práctica con casos de uso reales.</span>
+                            <span class="text-gray-300"><strong>Biblioteca de +60 Prompts:</strong> Listos para aplicar en tiempo real durante las clases.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Acceso a técnicas de personalización con Gems.</span>
+                            <span class="text-gray-300"><strong>Acceso a Grabaciones:</strong> Disponibilidad de los videos de las sesiones durante 2 meses.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Trabajo multimodal completo (Texto, Imagen, Canvas).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Constancia digital de finalización.</span>
+                            <span class="text-gray-300"><strong>Certificado de Finalización:</strong> Constancia digital al terminar el curso.</span>
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <!-- FORMULARIO INTEGRADO CON WEB3FORMS Y MERCADO PAGO -->
+            <!-- SECCIÓN DE FECHAS (DÍAS Y HORAS ACORDADOS) -->
+            <section class="section-border">
+                <h2 class="text-3xl font-bold text-center mb-8 text-white">🗓️ Formato del Curso</h2>
+                <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
+                    <div class="glass-card flex flex-col items-center text-center">
+                        <div class="text-4xl mb-4">🗓️</div>
+                        <h3 class="text-xl font-bold mb-2">2 Semanas Intensivas</h3>
+                        <p class="text-gray-400">Martes y Jueves</p>
+                        <p class="text-accent-teal mt-2 font-semibold italic text-sm">Iniciamos: Martes 24 de Febrero</p>
+                    </div>
+                    <div class="glass-card flex flex-col items-center text-center">
+                        <div class="text-4xl mb-4">🕒</div>
+                        <h3 class="text-xl font-bold mb-2">Horario Ejecutivo</h3>
+                        <p class="text-gray-400">3 horas por sesión (12h Totales)</p>
+                        <p class="text-white">18:00 - 21:00 (Hora Centro)</p>
+                        <p class="text-xs text-gray-500 mt-2">*Grabaciones disponibles por 2 meses</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORMULARIO ACTUALIZADO CON WEB3FORMS Y MERCADO PAGO -->
             <section class="section-border">
                 <h2 class="text-3xl font-bold text-center mb-4 text-white">🎯 Inscríbete Ahora</h2>
                 <p class="text-center text-gray-400 mb-10">Completa tus datos para formalizar tu inscripción.</p>
                
                 <form action="https://api.web3forms.com/submit" method="POST" class="max-w-lg mx-auto space-y-4">
                     
-                    <!-- LLAVE DE ACCESO -->
+                    <!-- LLAVE DE ACCESO INTEGRADA -->
                     <input type="hidden" name="access_key" value="614f57b3-3ddc-4c98-8073-2ca35407c193">
                     <input type="hidden" name="subject" value="Nueva Inscripción: Curso Gemini Pro">
-                    <!-- REDIRECCIÓN AUTOMÁTICA AL PAGO DESPUÉS DE ENVIAR -->
+                    <input type="hidden" name="from_name" value="Landing Page Gemini">
+                    <!-- REDIRECCIÓN AL PAGO TRAS EL REGISTRO -->
                     <input type="hidden" name="redirect" value="https://mpago.la/1UTBAbD">
 
                     <div>
@@ -252,12 +269,11 @@
                     </div>
                    
                     <div class="pt-4">
-                        <!-- EL BOTÓN AHORA ES UN SUBMIT QUE ENVÍA EL CORREO Y REDIRIGE AL PAGO -->
-                        <button type="submit" class="btn-payment w-full font-bold py-4 rounded-xl shadow-lg transform hover:-translate-y-1 uppercase tracking-wide cursor-pointer">
+                        <button type="submit" class="btn-payment w-full font-bold py-4 rounded-xl shadow-lg transform hover:-translate-y-1 uppercase tracking-wider cursor-pointer">
                             INSCRIBIRME
                         </button>
                         <p class="text-center text-xs text-gray-500 mt-4 flex items-center justify-center gap-2">
-                            🛡 Al inscribirte serás redirigido a <strong>Mercado Pago</strong>
+                            🛡 Pago Seguro garantizado con <strong>Mercado Pago</strong>
                         </p>
                     </div>
                 </form>
