@@ -77,6 +77,7 @@
             display: block;
             text-align: center;
             text-decoration: none;
+            font-weight: bold;
         }
         .btn-payment:hover {
             background-color: #14b8a6;
@@ -100,19 +101,19 @@
 <body class="antialiased p-2 md:p-4">
 
 
-    <!-- BARRA DE NAVEGACIÓN CON LOGO -->
+    <!-- BARRA DE NAVEGACIÓN -->
     <nav class="max-w-[1000px] mx-auto flex justify-between items-center py-4 px-6 mb-2">
         <div class="flex items-center gap-3">
-            <!-- Logo de Nexo IA -->
-            <img src="logo.png" alt="Nexo IA" onerror="this.style.display='none'; document.getElementById('temp-logo').style.display='flex';" class="h-10 w-auto" style="display: block;">
+            <!-- LOGO: Busca tu archivo logo.png -->
+            <img src="logo.png" alt="Nexo IA" onerror="this.style.display='none'; document.getElementById('temp-logo').style.display='flex';" class="h-10 w-auto rounded-full" style="display: block;">
            
-            <!-- Logo Temporal (si no hay imagen) -->
-            <div id="temp-logo" class="w-10 h-10 bg-[#2dd4bf] rounded-lg items-center justify-center text-[#030712] font-bold text-xl" style="display: none;">L</div>
+            <!-- RESPALDO: Si no hay imagen, sale una 'N' -->
+            <div id="temp-logo" class="w-10 h-10 bg-[#2dd4bf] rounded-lg items-center justify-center text-[#030712] font-bold text-xl flex" style="display: none;">N</div>
            
-            <span class="font-bold text-lg hidden sm:block tracking-tight text-white">Lourdes Garza <span class="accent-text">| Nexo IA</span></span>
+            <span class="font-bold text-lg hidden sm:block tracking-tight text-white uppercase">Lourdes Garza <span class="accent-text">| Nexo IA</span></span>
         </div>
-        <div class="flex gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest">
-            <a href="#programa" class="nav-link transition-colors text-gray-400">Programa</a>
+        <div class="flex gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-400">
+            <a href="#programa" class="nav-link transition-colors">Programa</a>
             <a href="#registro" class="accent-text">Inscripción</a>
         </div>
     </nav>
@@ -126,7 +127,7 @@
                     Aprende a Dominar Gemini Pro <br><span class="accent-text">Multiplica tu Productividad</span>
                 </h1>
                 <p class="text-lg text-gray-400 leading-relaxed">
-                    Descubre el potencial de la inteligencia artificial de Google con un curso <strong>teórico-práctico</strong> diseñado para llevarte desde los fundamentos hasta un nivel intermedio. Con <strong class="text-white">más de 60 prompts listos para usar</strong>, aprenderás a automatizar tareas, crear contenido profesional y trabajar de forma multimodal con texto, imágenes y datos.
+                    Descubre el potencial de la inteligencia artificial de Google con un curso <strong>teórico-práctico</strong> diseñado para llevarte desde los fundamentos hasta un nivel intermedio. Con <strong class="text-white">más de 60 prompts listos para usar</strong>.
                 </p>
             </div>
         </header>
@@ -135,7 +136,7 @@
         <main>
             <!-- SECCIÓN POR QUÉ -->
             <section class="section-border">
-                <div class="bg-slate-900 border-l-4 border-teal-500 p-8 rounded-r-lg">
+                <div class="bg-slate-900 border-l-4 border-teal-500 p-8 rounded-r-lg text-left">
                     <h2 class="text-2xl font-bold accent-text mb-4">💼 ¿Por qué este curso?</h2>
                     <p class="text-gray-300 leading-relaxed italic">
                         "Como profesional que trabaja con startups en la creación de documentos estratégicos, he logrado usar Gemini para desarrollar plantillas complejas como Proyectos de Requerimiento (PRDs). Este es solo uno de los muchos ejemplos de lo que puedes lograr al dominar esta herramienta."
@@ -149,188 +150,77 @@
             <section id="programa" class="section-border">
                 <h2 class="text-3xl font-bold text-center mb-12">📚 Estructura del Curso: 4 Módulos Completos</h2>
                 <div class="grid md:grid-cols-2 gap-6 text-left">
-                    <!-- Modulo 1 -->
                     <div class="glass-card">
-                        <span class="accent-text font-bold text-sm uppercase tracking-wider">Módulo 1</span>
-                        <h3 class="text-xl font-bold mt-2 mb-4 text-white">Arquitectura y Fundamentos de la Instrucción</h3>
-                        <p class="text-sm text-gray-500 mb-4">Aprende a comunicarte efectivamente con Gemini y construye bases sólidas.</p>
+                        <span class="accent-text font-bold text-sm uppercase">Módulo 1</span>
+                        <h3 class="text-xl font-bold mt-2 mb-4 text-white">Arquitectura y Fundamentos</h3>
                         <ul class="space-y-2 text-gray-300 text-sm">
                             <li>• Tema 1: Introducción a Gemini</li>
-                            <li>• Tema 2: Ecosistema Gemini: Potencial Pro vs Estándar</li>
-                            <li>• Tema 3: Ingeniería de Prompts: Estructuras de Alto Rendimiento</li>
-                            <li>• Tema 4: Definición de ADN de Marca: Tono y Estilo</li>
-                            <li>• Tema 5: Protocolos de Flujo de Información</li>
-                            <li>• Tema 6: Inyección de Contexto: Análisis de Activos</li>
+                            <li>• Tema 2: Ecosistema Gemini Pro</li>
+                            <li>• Tema 3: Ingeniería de Prompts</li>
                         </ul>
                     </div>
-
-
-                    <!-- Modulo 2 -->
                     <div class="glass-card">
-                        <span class="accent-text font-bold text-sm uppercase tracking-wider">Módulo 2</span>
-                        <h3 class="text-xl font-bold mt-2 mb-4 text-white">Ingeniería de Valor y Personalización (Gems)</h3>
-                        <p class="text-sm text-gray-500 mb-4">Crea tus propios asistentes personalizados y optimiza tu tiempo.</p>
+                        <span class="accent-text font-bold text-sm uppercase">Módulo 2</span>
+                        <h3 class="text-xl font-bold mt-2 mb-4 text-white">Gems y Personalización</h3>
                         <ul class="space-y-2 text-gray-300 text-sm">
-                            <li>• Tema 1: Análisis de Documentos y Contexto</li>
-                            <li>• Tema 2: Creación de Borradores y Exportación</li>
-                            <li>• Tema 3: Cómo crear tu propio Asistente Personal (Gems)</li>
-                            <li>• Tema 4: Gems en acción: De la teoría a la práctica</li>
+                            <li>• Tema 1: Análisis de Documentos</li>
+                            <li>• Tema 2: Cómo crear tu propio Gem</li>
                         </ul>
                     </div>
-
-
-                    <!-- Modulo 3 -->
                     <div class="glass-card">
-                        <span class="accent-text font-bold text-sm uppercase tracking-wider">Módulo 3</span>
-                        <h3 class="text-xl font-bold mt-2 mb-4 text-white">Ecosistema Multimodalidad y Canvas</h3>
-                        <p class="text-sm text-gray-500 mb-4">Aprende a usar el centro de operaciones dinámico de Gemini.</p>
+                        <span class="accent-text font-bold text-sm uppercase">Módulo 3</span>
+                        <h3 class="text-xl font-bold mt-2 mb-4 text-white">Multimodalidad y Canvas</h3>
                         <ul class="space-y-2 text-gray-300 text-sm">
-                            <li>• Tema 1: Inteligencia Visual y Generación Avanzada</li>
-                            <li>• Tema 2: Creación de imágenes con Nano Banana</li>
-                            <li>• Tema 3: Canvas: Tu centro de Operaciones Dinámico</li>
-                            <li>• Tema 4: Estructuración de Datos y Prototipado</li>
-                            <li>• Tema 5: Gemini como tu Tutor Personalizado</li>
+                            <li>• Tema 1: Inteligencia Visual</li>
+                            <li>• Tema 2: Canvas: Tu centro de Operaciones</li>
                         </ul>
                     </div>
-
-
-                    <!-- Modulo 4 -->
                     <div class="glass-card">
-                        <span class="accent-text font-bold text-sm uppercase tracking-wider">Módulo 4</span>
-                        <h3 class="text-xl font-bold mt-2 mb-4 text-white">Flujo de Trabajo Multimodal Avanzado</h3>
-                        <p class="text-sm text-gray-500 mb-4">Ruta completa desde la idea visual hasta el orden ejecutivo.</p>
+                        <span class="accent-text font-bold text-sm uppercase">Módulo 4</span>
+                        <h3 class="text-xl font-bold mt-2 mb-4 text-white">Flujo de Trabajo Avanzado</h3>
                         <ul class="space-y-2 text-gray-300 text-sm">
-                            <li>• Tema 1: Imágenes + Gems: Potencia Creativa</li>
-                            <li>• Tema 2: De la Idea al Esquema: Wireframes</li>
-                            <li>• Tema 3: Crea tablas y datos para tus gráficas</li>
-                            <li>• Tema 4: Ruta completa: De la idea visual al orden</li>
-                            <li>• Tema 5: Ciclo Completo: Canvas Directivo</li>
+                            <li>• Tema 1: De la Idea al Esquema</li>
+                            <li>• Tema 2: Ciclo Completo de Ejecución</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
 
-            <!-- INCLUYE -->
-            <section class="section-border bg-slate-900/50">
-                <div class="max-w-2xl mx-auto border border-gray-800 rounded-2xl p-10 bg-gray-900 shadow-xl">
-                    <h2 class="text-2xl font-bold mb-6 text-center text-white">✨ ¿Qué incluye este programa?</h2>
-                    <ul class="space-y-4 text-left">
-                        <li class="flex items-start gap-3">
-                            <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Más de 60 prompts especializados listos para usar.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Metodología teórico-práctica con casos de uso reales.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Acceso a técnicas de personalización con Gems.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Trabajo multimodal completo (Texto, Imagen, Canvas).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300">Constancia digital de finalización.</span>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-
-            <!-- FORMULARIO INTEGRADO CON WEB3FORMS -->
+            <!-- REGISTRO (WEB3FORMS) -->
             <section id="registro" class="section-border">
-                <h2 class="text-3xl font-bold text-center mb-4 text-white">🎯 Inscríbete Ahora</h2>
-                <p class="text-center text-gray-400 mb-10">Completa tus datos para formalizar tu inscripción.</p>
-               
-                <!-- Conexión con tu Web3Forms Access Key -->
+                <h2 class="text-3xl font-bold text-center mb-10 text-white italic">Inscríbete Ahora</h2>
                 <form action="https://api.web3forms.com/submit" method="POST" class="max-w-lg mx-auto space-y-4 text-left">
-                   
-                    <!-- LLAVE DE ACCESO WEB3FORMS -->
                     <input type="hidden" name="access_key" value="614f57b3-3ddc-4c98-8073-2ca35407c193">
-                   
-                    <!-- CONFIGURACIÓN OPCIONAL -->
-                    <input type="hidden" name="subject" value="Nueva Inscripción: Curso Gemini Pro">
-                    <input type="hidden" name="from_name" value="Nexo IA - Registro">
-
-
-                    <!-- REDIRECCIÓN AUTOMÁTICA AL PAGO -->
                     <input type="hidden" name="redirect" value="https://mpago.la/1UTBAbD">
-
-
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-gray-300">Nombre y Apellido</label>
-                        <input type="text" name="name" required class="w-full p-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Tu nombre completo">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-gray-300">Correo Electrónico</label>
-                        <input type="email" name="email" required class="w-full p-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="correo@ejemplo.com">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-gray-300">País y Teléfono Celular</label>
-                        <div class="flex">
-                            <select name="country_code" class="country-code p-3 text-sm focus:ring-2 focus:ring-teal-500 outline-none text-white rounded-l-lg">
-                                <option value="+52">🇲🇽 +52</option>
-                                <option value="+34">🇪🇸 +34</option>
-                                <option value="+54">🇦🇷 +54</option>
-                                <option value="+57">🇨🇴 +57</option>
-                                <option value="+56">🇨🇱 +56</option>
-                                <option value="+51">🇵🇪 +51</option>
-                                <option value="+58">🇻🇪 +58</option>
-                                <option value="+593">🇪🇨 +593</option>
-                                <option value="+502">🇬🇹 +502</option>
-                                <option value="+1">🇺🇸 +1</option>
-                            </select>
-                            <input type="tel" name="phone" required class="flex-1 p-3 border border-gray-700 border-l-0 rounded-r-lg focus:ring-2 focus:ring-teal-500 outline-none text-white" placeholder="Número celular">
-                        </div>
-                    </div>
-
-
-                    <div class="md:col-span-2 space-y-2 mt-4">
-                        <label class="block text-sm font-semibold mb-2 text-gray-300">¿Cuál es tu mayor reto con la IA?</label>
-                        <textarea name="message" class="w-full p-4 rounded-lg bg-[#1f2937] border border-gray-700 focus:ring-2 focus:ring-teal-500 outline-none h-32 resize-none" placeholder="Cuéntame un poco para personalizar tu experiencia..."></textarea>
-                    </div>
                    
-                    <div class="pt-4">
-                        <button type="submit" class="btn-payment w-full font-bold py-5 rounded-xl shadow-lg transform hover:-translate-y-1 uppercase tracking-widest cursor-pointer text-sm">
-                            INSCRIBIRME Y PAGAR
+                    <input type="text" name="name" required class="w-full p-4 rounded-xl outline-none" placeholder="Nombre completo">
+                    <input type="email" name="email" required class="w-full p-4 rounded-xl outline-none" placeholder="Correo electrónico">
+                   
+                    <div class="pt-6">
+                        <button type="submit" class="btn-payment w-full py-5 rounded-2xl shadow-xl uppercase tracking-widest text-sm">
+                            CONFIRMAR E IR AL PAGO
                         </button>
-                        <p class="text-center text-[10px] text-gray-500 mt-4 flex items-center justify-center gap-2">
-                            🛡 Transacción segura vía <strong>Web3Forms</strong> y <strong>Mercado Pago</strong>
-                        </p>
                     </div>
                 </form>
             </section>
 
 
             <!-- BONUS VYVO -->
-            <section class="p-6 md:p-10 mb-10">
-                <div class="vyvo-box p-8 md:p-12 max-w-3xl mx-auto shadow-2xl">
+            <section class="p-10">
+                <div class="vyvo-box p-12 max-w-3xl mx-auto shadow-2xl text-left">
                     <span class="bg-teal-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase">Bonus Exclusivo</span>
                     <h2 class="text-3xl font-bold mt-6 mb-6 accent-text">🤖 Conoce Vyvo: Tu Life CoPilot</h2>
-                    <p class="text-slate-300 text-lg mb-8 leading-relaxed text-left">
-                        Al finalizar el curso, te presentaré <strong>Vyvo</strong>, una plataforma de IA que está revolucionando la forma en que gestionamos nuestra vida personal y profesional. No es una simple app, es un <strong>sistema operativo de IA descentralizado (VAI OS)</strong>.
+                    <p class="text-slate-300 mb-8 leading-relaxed">
+                        Al finalizar el curso, conocerás la infraestructura SocialFi de Vyvo que está revolucionando la gestión de datos de salud.
                     </p>
-                    <div class="grid md:grid-cols-2 gap-8 text-left">
-                        <div class="space-y-4 text-sm text-gray-300">
-                            <p><strong>• Software, no una app:</strong> Integra salud, bienestar y estilo de vida.</p>
-                            <p><strong>• Tecnología Blockchain:</strong> Tú eres el único dueño de tus datos.</p>
-                        </div>
-                        <div class="space-y-4 text-sm text-gray-300">
-                            <p><strong>• Privacidad total:</strong> Almacenamiento seguro y descentralizado.</p>
-                            <p><strong>• IA proactiva:</strong> Insights biométricos en tiempo real.</p>
-                        </div>
-                    </div>
                 </div>
             </section>
         </main>
 
 
-        <footer class="text-center py-10 border-t border-gray-800 text-gray-500 text-xs">
-            &copy; 2026 Lourdes Garza | Nexo IA. Todos los derechos reservados.
+        <footer class="py-12 text-center border-t border-gray-800 text-gray-600 text-[10px] uppercase tracking-widest">
+            © 2026 Lourdes Garza | Nexo IA. Todos los derechos reservados.
         </footer>
     </div>
 
