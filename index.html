@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <!-- SEO Básico -->
-    <title>Curso Gemini Pro: Multiplica tu Productividad con IA</title>
+    <title>Curso Gemini Pro: Multiplica tu Productividad con IA | Lourdes Garza</title>
     <meta name="description" content="Domina Gemini Pro desde nivel básico a intermedio. Aprende ingeniería de prompts, creación de Gems y flujos multimodales para startups y profesionales.">
     <meta name="keywords" content="Gemini Pro, Curso IA, Inteligencia Artificial, Productividad, Google Gemini, Ingeniería de Prompts">
    
@@ -14,6 +14,7 @@
     <meta property="og:description" content="Aprende a automatizar tareas y crear contenido profesional con el potencial de la IA de Google.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop">
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -29,10 +30,12 @@
             font-family: 'Inter', sans-serif;
             background-color: #030712;
             color: var(--text-light);
+            margin: 0;
+            scroll-behavior: smooth;
         }
         .main-container {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 20px auto;
             background: var(--bg-dark);
             border: 1px solid #1f2937;
             border-radius: 20px;
@@ -79,34 +82,55 @@
             background-color: #14b8a6;
             box-shadow: 0 0 20px rgba(45, 212, 191, 0.4);
         }
-        input, select {
+        input, select, textarea {
             background-color: #1f2937 !important;
-            border-color: #374151 !important;
+            border: 1px solid #374151 !important;
             color: white !important;
         }
         .country-code {
-            width: 90px;
+            width: 100px;
             background: #1f2937;
             border: 1px solid #374151;
             border-right: none;
             border-radius: 6px 0 0 6px;
         }
+        .nav-link:hover { color: var(--accent-teal); }
     </style>
 </head>
-<body class="antialiased p-4">
+<body class="antialiased p-2 md:p-4">
+
+
+    <!-- BARRA DE NAVEGACIÓN CON LOGO -->
+    <nav class="max-w-[1000px] mx-auto flex justify-between items-center py-4 px-6 mb-2">
+        <div class="flex items-center gap-3">
+            <!-- Logo de Nexo IA -->
+            <img src="logo.png" alt="Nexo IA" onerror="this.style.display='none'; document.getElementById('temp-logo').style.display='flex';" class="h-10 w-auto" style="display: block;">
+           
+            <!-- Logo Temporal (si no hay imagen) -->
+            <div id="temp-logo" class="w-10 h-10 bg-[#2dd4bf] rounded-lg items-center justify-center text-[#030712] font-bold text-xl" style="display: none;">L</div>
+           
+            <span class="font-bold text-lg hidden sm:block tracking-tight text-white">Lourdes Garza <span class="accent-text">| Nexo IA</span></span>
+        </div>
+        <div class="flex gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest">
+            <a href="#programa" class="nav-link transition-colors text-gray-400">Programa</a>
+            <a href="#registro" class="accent-text">Inscripción</a>
+        </div>
+    </nav>
+
 
     <div class="main-container">
         <!-- HERO SECTION -->
         <header class="hero-section text-center">
             <div class="max-w-3xl mx-auto">
                 <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                    Aprende a Dominar Gemini Pro <span class="accent-text">Multiplica tu Productividad</span>
+                    Aprende a Dominar Gemini Pro <br><span class="accent-text">Multiplica tu Productividad</span>
                 </h1>
                 <p class="text-lg text-gray-400 leading-relaxed">
                     Descubre el potencial de la inteligencia artificial de Google con un curso <strong>teórico-práctico</strong> diseñado para llevarte desde los fundamentos hasta un nivel intermedio. Con <strong class="text-white">más de 60 prompts listos para usar</strong>, aprenderás a automatizar tareas, crear contenido profesional y trabajar de forma multimodal con texto, imágenes y datos.
                 </p>
             </div>
         </header>
+
 
         <main>
             <!-- SECCIÓN POR QUÉ -->
@@ -120,10 +144,11 @@
                 </div>
             </section>
 
+
             <!-- MÓDULOS -->
-            <section class="section-border">
+            <section id="programa" class="section-border">
                 <h2 class="text-3xl font-bold text-center mb-12">📚 Estructura del Curso: 4 Módulos Completos</h2>
-                <div class="grid md:grid-cols-2 gap-6">
+                <div class="grid md:grid-cols-2 gap-6 text-left">
                     <!-- Modulo 1 -->
                     <div class="glass-card">
                         <span class="accent-text font-bold text-sm uppercase tracking-wider">Módulo 1</span>
@@ -139,6 +164,7 @@
                         </ul>
                     </div>
 
+
                     <!-- Modulo 2 -->
                     <div class="glass-card">
                         <span class="accent-text font-bold text-sm uppercase tracking-wider">Módulo 2</span>
@@ -151,6 +177,7 @@
                             <li>• Tema 4: Gems en acción: De la teoría a la práctica</li>
                         </ul>
                     </div>
+
 
                     <!-- Modulo 3 -->
                     <div class="glass-card">
@@ -165,6 +192,7 @@
                             <li>• Tema 5: Gemini como tu Tutor Personalizado</li>
                         </ul>
                     </div>
+
 
                     <!-- Modulo 4 -->
                     <div class="glass-card">
@@ -182,64 +210,56 @@
                 </div>
             </section>
 
+
             <!-- INCLUYE -->
             <section class="section-border bg-slate-900/50">
                 <div class="max-w-2xl mx-auto border border-gray-800 rounded-2xl p-10 bg-gray-900 shadow-xl">
                     <h2 class="text-2xl font-bold mb-6 text-center text-white">✨ ¿Qué incluye este programa?</h2>
-                    <ul class="space-y-4">
+                    <ul class="space-y-4 text-left">
                         <li class="flex items-start gap-3">
                             <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300"><strong>4 Archivos Técnicos (PDF/Gamma):</strong> Un documento de estudio detallado por cada módulo (explicación + prompts).</span>
+                            <span class="text-gray-300">Más de 60 prompts especializados listos para usar.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300"><strong>Biblioteca de +60 Prompts:</strong> Listos para aplicar en tiempo real durante las clases.</span>
+                            <span class="text-gray-300">Metodología teórico-práctica con casos de uso reales.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300"><strong>Acceso a Grabaciones:</strong> Disponibilidad de los videos de las sesiones durante 2 meses.</span>
+                            <span class="text-gray-300">Acceso a técnicas de personalización con Gems.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="accent-text text-xl">✔</span>
-                            <span class="text-gray-300"><strong>Certificado de Finalización:</strong> Constancia digital al terminar el curso.</span>
+                            <span class="text-gray-300">Trabajo multimodal completo (Texto, Imagen, Canvas).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="accent-text text-xl">✔</span>
+                            <span class="text-gray-300">Constancia digital de finalización.</span>
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <!-- SECCIÓN DE FECHAS (DÍAS Y HORAS ACORDADOS) -->
-            <section class="section-border">
-                <h2 class="text-3xl font-bold text-center mb-8 text-white">🗓️ Formato del Curso</h2>
-                <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
-                    <div class="glass-card flex flex-col items-center text-center">
-                        <div class="text-4xl mb-4">🗓️</div>
-                        <h3 class="text-xl font-bold mb-2">2 Semanas Intensivas</h3>
-                        <p class="text-gray-400">Martes y Jueves</p>
-                        <p class="text-accent-teal mt-2 font-semibold italic text-sm">Iniciamos: Martes 24 de Febrero</p>
-                    </div>
-                    <div class="glass-card flex flex-col items-center text-center">
-                        <div class="text-4xl mb-4">🕒</div>
-                        <h3 class="text-xl font-bold mb-2">Horario Ejecutivo</h3>
-                        <p class="text-gray-400">3 horas por sesión (12h Totales)</p>
-                        <p class="text-white">19:00 - 22:00 (Hora Centro)</p>
-                        <p class="text-xs text-gray-500 mt-2">*Grabaciones disponibles por 2 meses</p>
-                    </div>
-                </div>
-            </section>
 
-            <!-- FORMULARIO ACTUALIZADO CON WEB3FORMS Y MERCADO PAGO -->
-            <section class="section-border">
+            <!-- FORMULARIO INTEGRADO CON WEB3FORMS -->
+            <section id="registro" class="section-border">
                 <h2 class="text-3xl font-bold text-center mb-4 text-white">🎯 Inscríbete Ahora</h2>
                 <p class="text-center text-gray-400 mb-10">Completa tus datos para formalizar tu inscripción.</p>
                
-                <form action="https://api.web3forms.com/submit" method="POST" class="max-w-lg mx-auto space-y-4">
-                    
-                    <!-- LLAVE DE ACCESO INTEGRADA -->
+                <!-- Conexión con tu Web3Forms Access Key -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="max-w-lg mx-auto space-y-4 text-left">
+                   
+                    <!-- LLAVE DE ACCESO WEB3FORMS -->
                     <input type="hidden" name="access_key" value="614f57b3-3ddc-4c98-8073-2ca35407c193">
+                   
+                    <!-- CONFIGURACIÓN OPCIONAL -->
                     <input type="hidden" name="subject" value="Nueva Inscripción: Curso Gemini Pro">
-                    <input type="hidden" name="from_name" value="Landing Page Gemini">
-                    <!-- REDIRECCIÓN AL PAGO TRAS EL REGISTRO -->
+                    <input type="hidden" name="from_name" value="Nexo IA - Registro">
+
+
+                    <!-- REDIRECCIÓN AUTOMÁTICA AL PAGO -->
                     <input type="hidden" name="redirect" value="https://mpago.la/1UTBAbD">
+
 
                     <div>
                         <label class="block text-sm font-semibold mb-2 text-gray-300">Nombre y Apellido</label>
@@ -252,7 +272,7 @@
                     <div>
                         <label class="block text-sm font-semibold mb-2 text-gray-300">País y Teléfono Celular</label>
                         <div class="flex">
-                            <select name="country_code" class="country-code p-3 text-sm focus:ring-2 focus:ring-teal-500 outline-none text-white">
+                            <select name="country_code" class="country-code p-3 text-sm focus:ring-2 focus:ring-teal-500 outline-none text-white rounded-l-lg">
                                 <option value="+52">🇲🇽 +52</option>
                                 <option value="+34">🇪🇸 +34</option>
                                 <option value="+54">🇦🇷 +54</option>
@@ -264,30 +284,37 @@
                                 <option value="+502">🇬🇹 +502</option>
                                 <option value="+1">🇺🇸 +1</option>
                             </select>
-                            <input type="tel" name="phone" required class="phone-input flex-1 p-3 border border-gray-700 border-l-0 focus:ring-2 focus:ring-teal-500 outline-none text-white" placeholder="Número celular">
+                            <input type="tel" name="phone" required class="flex-1 p-3 border border-gray-700 border-l-0 rounded-r-lg focus:ring-2 focus:ring-teal-500 outline-none text-white" placeholder="Número celular">
                         </div>
+                    </div>
+
+
+                    <div class="md:col-span-2 space-y-2 mt-4">
+                        <label class="block text-sm font-semibold mb-2 text-gray-300">¿Cuál es tu mayor reto con la IA?</label>
+                        <textarea name="message" class="w-full p-4 rounded-lg bg-[#1f2937] border border-gray-700 focus:ring-2 focus:ring-teal-500 outline-none h-32 resize-none" placeholder="Cuéntame un poco para personalizar tu experiencia..."></textarea>
                     </div>
                    
                     <div class="pt-4">
-                        <button type="submit" class="btn-payment w-full font-bold py-4 rounded-xl shadow-lg transform hover:-translate-y-1 uppercase tracking-wider cursor-pointer">
-                            INSCRIBIRME
+                        <button type="submit" class="btn-payment w-full font-bold py-5 rounded-xl shadow-lg transform hover:-translate-y-1 uppercase tracking-widest cursor-pointer text-sm">
+                            INSCRIBIRME Y PAGAR
                         </button>
-                        <p class="text-center text-xs text-gray-500 mt-4 flex items-center justify-center gap-2">
-                            🛡 Pago Seguro garantizado con <strong>Mercado Pago</strong>
+                        <p class="text-center text-[10px] text-gray-500 mt-4 flex items-center justify-center gap-2">
+                            🛡 Transacción segura vía <strong>Web3Forms</strong> y <strong>Mercado Pago</strong>
                         </p>
                     </div>
                 </form>
             </section>
 
+
             <!-- BONUS VYVO -->
             <section class="p-6 md:p-10 mb-10">
                 <div class="vyvo-box p-8 md:p-12 max-w-3xl mx-auto shadow-2xl">
-                    <span class="bg-teal-500 text-black text-xs font-bold px-3 py-1 rounded-full uppercase">Bonus Exclusivo</span>
-                    <h2 class="text-4xl font-bold mt-6 mb-6 accent-text">🤖 Conoce Vyvo: Tu Life CoPilot</h2>
-                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                    <span class="bg-teal-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase">Bonus Exclusivo</span>
+                    <h2 class="text-3xl font-bold mt-6 mb-6 accent-text">🤖 Conoce Vyvo: Tu Life CoPilot</h2>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed text-left">
                         Al finalizar el curso, te presentaré <strong>Vyvo</strong>, una plataforma de IA que está revolucionando la forma en que gestionamos nuestra vida personal y profesional. No es una simple app, es un <strong>sistema operativo de IA descentralizado (VAI OS)</strong>.
                     </p>
-                    <div class="grid md:grid-cols-2 gap-8">
+                    <div class="grid md:grid-cols-2 gap-8 text-left">
                         <div class="space-y-4 text-sm text-gray-300">
                             <p><strong>• Software, no una app:</strong> Integra salud, bienestar y estilo de vida.</p>
                             <p><strong>• Tecnología Blockchain:</strong> Tú eres el único dueño de tus datos.</p>
@@ -301,10 +328,12 @@
             </section>
         </main>
 
-        <footer class="text-center py-10 border-t border-gray-800 text-gray-500 text-sm">
-            &copy; 2025 Curso Gemini Pro. Todos los derechos reservados.
+
+        <footer class="text-center py-10 border-t border-gray-800 text-gray-500 text-xs">
+            &copy; 2026 Lourdes Garza | Nexo IA. Todos los derechos reservados.
         </footer>
     </div>
+
 
 </body>
 </html>
