@@ -17,6 +17,7 @@
 
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         :root {
@@ -74,11 +75,15 @@
             background-color: var(--accent-teal);
             color: #030712;
             transition: all 0.3s ease;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             text-align: center;
             text-decoration: none;
+            width: 100%;
         }
-        .btn-payment:hover {
+        .btn-payment:hover:not(:disabled) {
             background-color: #14b8a6;
             box-shadow: 0 0 20px rgba(45, 212, 191, 0.4);
         }
@@ -95,23 +100,32 @@
             border-radius: 6px 0 0 6px;
         }
         .nav-link:hover { color: var(--accent-teal); }
+
+
+        /* Loader para el botón */
+        .loader {
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 2px solid #030712;
+            width: 18px;
+            height: 18px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body class="antialiased p-2 md:p-4">
 
 
-    <!-- BARRA DE NAVEGACIÓN CON LOGO -->
+    <!-- BARRA DE NAVEGACIÓN -->
     <nav class="max-w-[1000px] mx-auto flex justify-between items-center py-4 px-6 mb-2">
         <div class="flex items-center gap-3">
-            <!-- Logo de Nexo IA -->
             <img src="logo.png" alt="Nexo IA" onerror="this.style.display='none'; document.getElementById('temp-logo').style.display='flex';" class="h-10 w-auto" style="display: block;">
-           
-            <!-- Logo Temporal (si no hay imagen) -->
             <div id="temp-logo" class="w-10 h-10 bg-[#2dd4bf] rounded-lg items-center justify-center text-[#030712] font-bold text-xl" style="display: none;">L</div>
-           
             <span class="font-bold text-lg hidden sm:block tracking-tight">Lourdes Garza <span class="accent-text">| Nexo IA</span></span>
         </div>
-        <div class="flex gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest">
+        <div class="flex gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-400">
             <a href="#programa" class="nav-link transition-colors">Programa</a>
             <a href="#registro" class="accent-text">Inscripción</a>
         </div>
@@ -145,7 +159,7 @@
             </section>
 
 
-            <!-- MÓDULOS -->
+            <!-- MÓDULOS (DETALLE COMPLETO) -->
             <section id="programa" class="section-border">
                 <h2 class="text-3xl font-bold text-center mb-12">📚 Estructura del Curso: 4 Módulos Completos</h2>
                 <div class="grid md:grid-cols-2 gap-6">
@@ -241,62 +255,56 @@
             </section>
 
 
-            <!-- FORMULARIO INTEGRADO CON WEB3FORMS -->
+            <!-- FORMULARIO DE REGISTRO -->
             <section id="registro" class="section-border">
                 <h2 class="text-3xl font-bold text-center mb-4 text-white">🎯 Inscríbete Ahora</h2>
                 <p class="text-center text-gray-400 mb-10">Completa tus datos para formalizar tu inscripción.</p>
                
-                <!-- Conexión con tu Web3Forms Access Key -->
-                <form action="https://api.web3forms.com/submit" method="POST" class="max-w-lg mx-auto space-y-4">
-                   
+                <form id="geminiForm" class="max-w-lg mx-auto space-y-4">
                     <!-- LLAVE DE ACCESO WEB3FORMS -->
                     <input type="hidden" name="access_key" value="614f57b3-3ddc-4c98-8073-2ca35407c193">
-                   
-                    <!-- CONFIGURACIÓN OPCIONAL -->
                     <input type="hidden" name="subject" value="Nueva Inscripción: Curso Gemini Pro">
                     <input type="hidden" name="from_name" value="Nexo IA - Registro">
 
 
-                    <!-- REDIRECCIÓN AUTOMÁTICA AL PAGO -->
-                    <input type="hidden" name="redirect" value="https://mpago.la/1UTBAbD">
-
-
                     <div>
                         <label class="block text-sm font-semibold mb-2 text-gray-300">Nombre y Apellido</label>
-                        <input type="text" name="name" required class="w-full p-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Tu nombre completo">
+                        <input type="text" name="name" required class="w-full p-3 border border-gray-700 rounded-lg outline-none" placeholder="Tu nombre completo">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold mb-2 text-gray-300">Correo Electrónico</label>
-                        <input type="email" name="email" required class="w-full p-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="correo@ejemplo.com">
+                        <input type="email" name="email" required class="w-full p-3 border border-gray-700 rounded-lg outline-none" placeholder="correo@ejemplo.com">
                     </div>
                     <div>
                         <label class="block text-sm font-semibold mb-2 text-gray-300">País y Teléfono Celular</label>
                         <div class="flex">
-                            <select name="country_code" class="country-code p-3 text-sm focus:ring-2 focus:ring-teal-500 outline-none text-white rounded-l-lg">
+                            <select name="country_code" class="country-code p-3 text-sm text-white rounded-l-lg outline-none">
                                 <option value="+52">🇲🇽 +52</option>
                                 <option value="+34">🇪🇸 +34</option>
                                 <option value="+54">🇦🇷 +54</option>
                                 <option value="+57">🇨🇴 +57</option>
                                 <option value="+56">🇨🇱 +56</option>
                                 <option value="+51">🇵🇪 +51</option>
-                                <option value="+58">🇻🇪 +58</option>
-                                <option value="+593">🇪🇨 +593</option>
-                                <option value="+502">🇬🇹 +502</option>
                                 <option value="+1">🇺🇸 +1</option>
                             </select>
-                            <input type="tel" name="phone" required class="flex-1 p-3 border border-gray-700 border-l-0 rounded-r-lg focus:ring-2 focus:ring-teal-500 outline-none text-white" placeholder="Número celular">
+                            <input type="tel" name="phone" required class="flex-1 p-3 border border-gray-700 border-l-0 rounded-r-lg text-white outline-none" placeholder="Número celular">
                         </div>
                     </div>
 
 
                     <div class="md:col-span-2 space-y-2 mt-4">
                         <label class="block text-sm font-semibold mb-2 text-gray-300">¿Cuál es tu mayor reto con la IA?</label>
-                        <textarea name="message" class="w-full p-4 rounded-lg bg-[#1f2937] border border-gray-700 focus:ring-2 focus:ring-teal-500 outline-none h-32 resize-none" placeholder="Cuéntame un poco para personalizar tu experiencia..."></textarea>
+                        <textarea name="message" class="w-full p-4 rounded-lg bg-[#1f2937] border border-gray-700 outline-none h-32 resize-none" placeholder="Cuéntame un poco para personalizar tu experiencia..."></textarea>
                     </div>
+
+
+                    <!-- Mensaje de estado -->
+                    <div id="statusMsg" class="text-center text-sm font-bold py-2"></div>
                    
                     <div class="pt-4">
-                        <button type="submit" class="btn-payment w-full font-bold py-5 rounded-xl shadow-lg transform hover:-translate-y-1 uppercase tracking-widest cursor-pointer text-sm">
-                            INSCRIBIRME Y PAGAR
+                        <button type="submit" id="submitBtn" class="btn-payment w-full font-bold py-5 rounded-xl shadow-lg transform hover:-translate-y-1 uppercase tracking-widest text-sm">
+                            <span id="btnText">INSCRIBIRME Y PAGAR</span>
+                            <div id="btnLoader" class="loader"></div>
                         </button>
                         <p class="text-center text-[10px] text-gray-500 mt-4 flex items-center justify-center gap-2">
                             🛡 Transacción segura vía <strong>Web3Forms</strong> y <strong>Mercado Pago</strong>
@@ -306,7 +314,7 @@
             </section>
 
 
-            <!-- BONUS VYVO -->
+            <!-- BONUS VYVO (DETALLE COMPLETO) -->
             <section class="p-6 md:p-10 mb-10">
                 <div class="vyvo-box p-8 md:p-12 max-w-3xl mx-auto shadow-2xl">
                     <span class="bg-teal-500 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase">Bonus Exclusivo</span>
@@ -335,6 +343,68 @@
     </div>
 
 
+    <!-- LÓGICA DE PAGO Y REGISTRO -->
+    <script>
+        const form = document.getElementById('geminiForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnLoader = document.getElementById('btnLoader');
+        const statusMsg = document.getElementById('statusMsg');
+
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+           
+            // Iniciar carga
+            submitBtn.disabled = true;
+            btnLoader.style.display = "block";
+            btnText.textContent = "REGISTRANDO...";
+            statusMsg.textContent = "Guardando tus datos de inscripción...";
+            statusMsg.className = "text-center text-sm font-bold py-2 text-gray-400";
+
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                if (response.status == 200) {
+                    statusMsg.textContent = "¡Registro exitoso! Saltando a la pasarela de pago...";
+                    statusMsg.className = "text-center text-sm font-bold py-2 text-green-400";
+                    btnText.textContent = "ABRIENDO MERCADO PAGO...";
+                   
+                    // REDIRECCIÓN FORZADA A MERCADO PAGO
+                    window.location.href = "https://mpago.la/1UTBAbD";
+                } else {
+                    const jsonError = await response.json();
+                    statusMsg.textContent = "Error: " + jsonError.message;
+                    statusMsg.className = "text-center text-sm font-bold py-2 text-red-400";
+                    resetBtn();
+                }
+            })
+            .catch(error => {
+                statusMsg.textContent = "Error de conexión. Intenta de nuevo.";
+                statusMsg.className = "text-center text-sm font-bold py-2 text-red-400";
+                resetBtn();
+            });
+        });
+
+
+        function resetBtn() {
+            submitBtn.disabled = false;
+            btnLoader.style.display = "none";
+            btnText.textContent = "INSCRIBIRME Y PAGAR";
+        }
+    </script>
 </body>
 </html>
 
